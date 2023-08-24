@@ -1,0 +1,21 @@
+query Input{
+  cart{
+      cost{
+        totalAmount{
+          amount
+        }
+      }
+      lines {
+      id
+      quantity
+      merchandise {
+        ...on ProductVariant {
+            id
+            product{
+               bxgytarget: hasAnyTag(tags:["bxgytarget"])
+            }
+        }
+      }
+    }
+  }
+}
